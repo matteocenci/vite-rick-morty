@@ -5,10 +5,10 @@
 </script>
 
 <template>
-    <h2>Title</h2>
-
+    <h1 class="text-center mt-2 fw-bold"> Rick and Morty App</h1>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang = "scss">
+
 
 </style>
