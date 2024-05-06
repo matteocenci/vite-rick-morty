@@ -1,6 +1,7 @@
 <script>
 import axios from "axios";
 import AppHeader from './components/AppHeader.vue';
+import CardList from './components/CardList.vue';
 
 
 export default {
@@ -8,12 +9,13 @@ export default {
     axios.get("https://rickandmortyapi.com/api/character", {
     })
     .then((resp) => {
-      console.log(resp);
-      this.cardsArray = resp.data.data;
+      this.cardsArray = resp.data.results;
+      // console.log(this.cardsArray);
     })
   },
   components: {
-    AppHeader
+    AppHeader,
+    CardList
   },
   data() {
     return{
@@ -26,6 +28,7 @@ export default {
 
 <template>
   <AppHeader />
+  <CardList v-if="cardsArray.length" :cardsArray = "cardsArray"/>
 </template>
 
 <style scoped>
