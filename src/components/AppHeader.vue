@@ -2,6 +2,7 @@
     import {store} from "../store.js";
 
     export default {
+        emits: ['selection'],
         data() {
             return {
                 store,
@@ -26,6 +27,8 @@
                 </select>
 
             </div>
+
+            <p>Numero di carte: {{ store.count.length }}</p>
         </div>
     </div>
 </template>

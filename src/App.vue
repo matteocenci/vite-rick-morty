@@ -33,6 +33,7 @@ export default {
         params: paramsObj
       }).then((resp) => {
         this.cardsArray = resp.data.results
+        this.count = this.cardsArray.length
       })
     }
   },
