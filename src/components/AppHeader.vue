@@ -28,7 +28,7 @@
 
             </div>
 
-            <p>Numero di carte: {{ store.count.length }}</p>
+            
         </div>
     </div>
 </template>
